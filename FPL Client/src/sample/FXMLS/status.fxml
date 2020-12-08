@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="750.0" prefWidth="980.0" stylesheets="@../Styles/design.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.status">
+    <children>
+        <BorderPane fx:id="teamBorderPane" prefHeight="750.0" prefWidth="980.0" />
+        <ScrollPane fx:id="scrlPane" prefHeight="750.0" prefWidth="980.0" stylesheets="@../Styles/scrollPane.css">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2000.0" prefWidth="980.0">
+                    <children>
+                        <Text fx:id="gwstatus" fill="#fcf9f9" layoutX="56.0" layoutY="409.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gameeweek 31 Status">
+                            <font>
+                                <Font name="System Bold" size="28.0" />
+                            </font>
+                        </Text>
+                        <Pane fx:id="mainPane" layoutX="37.0" layoutY="70.0" prefHeight="211.0" prefWidth="902.0" style="-fx-background-color: rgba(0,243,129,1);">
+                            <children>
+                                <ImageView fitHeight="218.0" fitWidth="776.0" layoutX="126.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../photos/logo1.png" />
+                                    </image>
+                                </ImageView>
+                                <Pane layoutY="211.0" prefHeight="83.0" prefWidth="902.0" style="-fx-background-color: rgba(0,0,0,.3);">
+                                    <children>
+                                        <HBox prefHeight="87.0" prefWidth="902.0" spacing="14.0">
+                                            <children>
+                                                <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="8.0" style="-fx-background-color: transparent;" styleClass="panebox" stylesheets="@../Styles/design.css">
+                                                    <children>
+                                                        <Text fill="#00ff87" strokeType="OUTSIDE" strokeWidth="0.0" text="Highest Point">
+                                                            <font>
+                                                                <Font name="System Bold" size="15.0" />
+                                                            </font>
+                                                        </Text>
+                                                        <Text fx:id="highestPoints" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="1000">
+                                                            <font>
+                                                                <Font name="System Bold" size="18.0" />
+                                                            </font>
+                                                        </Text>
+                                                    </children>
+                                                    <padding>
+                                                        <Insets left="10.0" right="10.0" />
+                                                    </padding>
+                                                </VBox>
+                                                <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="8.0" style="-fx-background-color: transparent;" styleClass="panebox" stylesheets="@../Styles/design.css">
+                                                    <children>
+                                                        <Text fill="#00ff87" strokeType="OUTSIDE" strokeWidth="0.0" text="Average Points">
+                                                            <font>
+                                                                <Font name="System Bold" size="15.0" />
+                                                            </font>
+                                                        </Text>
+                                                        <Text fx:id="averagePoints" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="1000">
+                                                            <font>
+                                                                <Font name="System Bold" size="18.0" />
+                                                            </font>
+                                                        </Text>
+                                                    </children>
+                                                    <padding>
+                                                        <Insets left="10.0" right="10.0" />
+                                                    </padding>
+                                                </VBox>
+                                                <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="8.0" style="-fx-background-color: transparent;" styleClass="panebox" stylesheets="@../Styles/design.css">
+                                                    <children>
+                                                        <Text fill="#00ff87" strokeType="OUTSIDE" strokeWidth="0.0" text="Transfers Made">
+                                                            <font>
+                                                                <Font name="System Bold" size="15.0" />
+                                                            </font>
+                                                        </Text>
+                                                        <Text fx:id="transfersMade" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="1000">
+                                                            <font>
+                                                                <Font name="System Bold" size="18.0" />
+                                                            </font>
+                                                        </Text>
+                                                    </children>
+                                                    <padding>
+                                                        <Insets left="10.0" right="10.0" />
+                                                    </padding>
+                                                </VBox>
+                                                <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="8.0" style="-fx-background-color: transparent;" styleClass="panebox" stylesheets="@../Styles/design.css">
+                                                    <children>
+                                                        <Text fill="#00ff87" strokeType="OUTSIDE" strokeWidth="0.0" text="Most Transferred in">
+                                                            <font>
+                                                                <Font name="System Bold" size="15.0" />
+                                                            </font>
+                                                        </Text>
+                                                        <Text fx:id="mostransferredIn" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="1000">
+                                                            <font>
+                                                                <Font name="System Bold" size="18.0" />
+                                                            </font>
+                                                        </Text>
+                                                    </children>
+                                                    <padding>
+                                                        <Insets left="10.0" right="10.0" />
+                                                    </padding>
+                                                </VBox>
+                                                <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="8.0" style="-fx-background-color: transparent;" styleClass="panebox" stylesheets="@../Styles/design.css">
+                                                    <children>
+                                                        <Text fill="#00ff87" strokeType="OUTSIDE" strokeWidth="0.0" text="Wildcards Played">
+                                                            <font>
+                                                                <Font name="System Bold" size="15.0" />
+                                                            </font>
+                                                        </Text>
+                                                        <Text fx:id="wildcardplayed" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="1000">
+                                                            <font>
+                                                                <Font name="System Bold" size="18.0" />
+                                                            </font>
+                                                        </Text>
+                                                    </children>
+                                                    <padding>
+                                                        <Insets left="10.0" right="10.0" />
+                                                    </padding>
+                                                </VBox>
+                                                <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="8.0" style="-fx-background-color: transparent;" styleClass="panebox" stylesheets="@../Styles/design.css">
+                                                    <children>
+                                                        <Text fill="#00ff87" strokeType="OUTSIDE" strokeWidth="0.0" text="Most Captain">
+                                                            <font>
+                                                                <Font name="System Bold" size="15.0" />
+                                                            </font>
+                                                        </Text>
+                                                        <Text fx:id="mostCaptain" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="1000">
+                                                            <font>
+                                                                <Font name="System Bold" size="18.0" />
+                                                            </font>
+                                                        </Text>
+                                                    </children>
+                                                    <padding>
+                                                        <Insets left="10.0" right="10.0" />
+                                                    </padding>
+                                                </VBox>
+                                            </children>
+                                            <padding>
+                                                <Insets left="25.0" top="12.0" />
+                                            </padding>
+                                        </HBox>
+                                    </children>
+                                </Pane>
+                                <ImageView fitHeight="275.0" fitWidth="411.0" layoutX="478.0" layoutY="-63.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../photos/playerStatus.png" />
+                                    </image>
+                                </ImageView>
+                                <Text fx:id="gwbox" fill="#37003c" layoutX="73.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gameweek 31">
+                                    <font>
+                                        <Font name="System Bold" size="22.0" />
+                                    </font>
+                                </Text>
+                                <Button layoutX="39.0" layoutY="87.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="221.0" styleClass="button2" stylesheets="@../Styles/design.css" text="My Team" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="16.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                            <effect>
+                                <DropShadow color="#00000049" height="50.66" radius="24.0875" spread="0.22" width="47.69" />
+                            </effect>
+                        </Pane>
+                        <Pane layoutX="43.0" layoutY="436.0" prefHeight="577.0" prefWidth="377.0" style="-fx-background-color: rgba(0,0,0,.3); -fx-background-radius: 30;">
+                            <children>
+                                <VBox alignment="CENTER" prefHeight="50.0" prefWidth="377.0" style="-fx-background-color: rgba(255,255,255,.15); -fx-background-radius: 30 30 0 0;">
+                                    <children>
+                                        <Text fill="#fcf9f9" strokeType="OUTSIDE" strokeWidth="0.0" text="Top Players by Gameweek">
+                                            <font>
+                                                <Font name="System Bold" size="18.0" />
+                                            </font>
+                                        </Text>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </Pane>
+                        <Pane layoutX="464.0" layoutY="436.0" prefHeight="577.0" prefWidth="482.0" style="-fx-background-color: rgba(0,0,0,.3); -fx-background-radius: 30;">
+                            <children>
+                                <VBox alignment="CENTER" prefHeight="50.0" prefWidth="482.0" style="-fx-background-color: rgba(255,255,255,.15); -fx-background-radius: 30 30 0 0;">
+                                    <children>
+                                        <Text fill="#fcf9f9" strokeType="OUTSIDE" strokeWidth="0.0" text="Overall Dream Team">
+                                            <font>
+                                                <Font name="System Bold" size="18.0" />
+                                            </font>
+                                        </Text>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </Pane>
+                        <Pane layoutX="43.0" layoutY="1063.0" prefHeight="350.0" prefWidth="430.0" style="-fx-background-color: rgba(0,0,0,.3); -fx-background-radius: 30;">
+                            <children>
+                                <VBox alignment="CENTER" prefHeight="50.0" prefWidth="430.0" style="-fx-background-color: rgba(255,255,255,.15); -fx-background-radius: 30 30 0 0;">
+                                    <children>
+                                        <Text fill="#fcf9f9" strokeType="OUTSIDE" strokeWidth="0.0" text="Top Transfers In this week">
+                                            <font>
+                                                <Font name="System Bold" size="18.0" />
+                                            </font>
+                                        </Text>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </Pane>
+                        <Pane layoutX="510.0" layoutY="1063.0" prefHeight="350.0" prefWidth="430.0" style="-fx-background-color: rgba(0,0,0,.3); -fx-background-radius: 30;">
+                            <children>
+                                <VBox alignment="CENTER" prefHeight="50.0" prefWidth="430.0" style="-fx-background-color: rgba(255,255,255,.15); -fx-background-radius: 30 30 0 0;">
+                                    <children>
+                                        <Text fill="#fcf9f9" strokeType="OUTSIDE" strokeWidth="0.0" text="Top Transfers Out this week">
+                                            <font>
+                                                <Font name="System Bold" size="18.0" />
+                                            </font>
+                                        </Text>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </Pane>
+                        <Pane layoutX="43.0" layoutY="1463.0" prefHeight="350.0" prefWidth="430.0" style="-fx-background-color: rgba(0,0,0,.3); -fx-background-radius: 30;">
+                            <children>
+                                <VBox alignment="CENTER" prefHeight="50.0" prefWidth="430.0" style="-fx-background-color: rgba(255,255,255,.15); -fx-background-radius: 30 30 0 0;">
+                                    <children>
+                                        <Text fill="#fcf9f9" strokeType="OUTSIDE" strokeWidth="0.0" text="Best Leagues">
+                                            <font>
+                                                <Font name="System Bold" size="18.0" />
+                                            </font>
+                                        </Text>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </Pane>
+                        <Pane layoutX="510.0" layoutY="1463.0" prefHeight="350.0" prefWidth="430.0" style="-fx-background-color: rgba(0,0,0,.3); -fx-background-radius: 30;">
+                            <children>
+                                <VBox alignment="CENTER" prefHeight="50.0" prefWidth="430.0" style="-fx-background-color: rgba(255,255,255,.15); -fx-background-radius: 30 30 0 0;">
+                                    <children>
+                                        <Text fill="#fcf9f9" strokeType="OUTSIDE" strokeWidth="0.0" text="Most Valuable Team">
+                                            <font>
+                                                <Font name="System Bold" size="18.0" />
+                                            </font>
+                                        </Text>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </Pane>
+                        <TableView fx:id="tabletopgwp" layoutX="43.0" layoutY="488.0" prefHeight="525.0" prefWidth="377.0" stylesheets="@../Styles/statusTable.css">
+                            <columns>
+                                <TableColumn fx:id="tpgw" prefWidth="84.0" text="GW" />
+                                <TableColumn fx:id="tpplayer" prefWidth="197.0" text="Player" />
+                                <TableColumn fx:id="tppoints" prefWidth="94.0" text="Points" />
+                            </columns>
+                        </TableView>
+                        <TableView fx:id="tableDT" layoutX="464.0" layoutY="488.0" prefHeight="525.0" prefWidth="482.0" stylesheets="@../Styles/statusTable.css">
+                            <columns>
+                                <TableColumn fx:id="dtpos" prefWidth="87.0" text="Pos" />
+                                <TableColumn fx:id="dtplayer" prefWidth="198.0" text="Player" />
+                                <TableColumn fx:id="dtclub" prefWidth="88.0" text="Club" />
+                                <TableColumn fx:id="dtpoints" prefWidth="107.0" text="Points" />
+                            </columns>
+                        </TableView>
+                        <TableView fx:id="transfersinTable" layoutX="43.0" layoutY="1113.0" prefHeight="320.0" prefWidth="430.0" stylesheets="@../Styles/statusTable.css">
+                            <columns>
+                                <TableColumn fx:id="info1" prefWidth="51.0" />
+                                <TableColumn fx:id="img1" prefWidth="31.0" />
+                                <TableColumn fx:id="pos1" prefWidth="65.0" text="Pos" />
+                                <TableColumn fx:id="player1" prefWidth="141.0" text="Player" />
+                                <TableColumn fx:id="club1" prefWidth="69.0" text="Club" />
+                                <TableColumn fx:id="number1" prefWidth="72.0" />
+                            </columns>
+                        </TableView>
+                        <TableView fx:id="bestLeaguesTable" layoutX="43.0" layoutY="1513.0" prefHeight="320.0" prefWidth="430.0" stylesheets="@../Styles/statusTable.css">
+                            <columns>
+                                <TableColumn fx:id="pos2" prefWidth="75.0" text="Pos" />
+                                <TableColumn fx:id="name2" prefWidth="217.66665649414062" text="League" />
+                                <TableColumn fx:id="num2" prefWidth="136.0" text="Average" />
+                            </columns>
+                        </TableView>
+                        <TableView fx:id="mostValuedTeamTable1" layoutX="510.0" layoutY="1513.0" prefHeight="320.0" prefWidth="430.0" stylesheets="@../Styles/statusTable.css">
+                            <columns>
+                                <TableColumn fx:id="pos21" prefWidth="75.0" text="Pos" />
+                                <TableColumn fx:id="name21" prefWidth="217.66665649414062" text="Team" />
+                                <TableColumn fx:id="num21" prefWidth="136.0" text="Value" />
+                            </columns>
+                        </TableView>
+                        <TableView fx:id="transfersoutTable" layoutX="510.0" layoutY="1113.0" prefHeight="320.0" prefWidth="430.0" stylesheets="@../Styles/statusTable.css">
+                            <columns>
+                                <TableColumn fx:id="info11" prefWidth="51.0" />
+                                <TableColumn fx:id="img11" prefWidth="31.0" />
+                                <TableColumn fx:id="pos11" prefWidth="65.0" text="Pos" />
+                                <TableColumn fx:id="player11" prefWidth="141.0" text="Player" />
+                                <TableColumn fx:id="club11" prefWidth="69.0" text="Club" />
+                                <TableColumn fx:id="number11" prefWidth="72.0" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </AnchorPane>
+            </content>
+        </ScrollPane>
+        <Button fx:id="teamClose" mnemonicParsing="false" onAction="#teamCloseAction" opacity="0.0" prefHeight="25.0" prefWidth="31.0" styleClass="buttonClose" stylesheets="@../Styles/design.css" text="X" />
+    </children>
+</AnchorPane>

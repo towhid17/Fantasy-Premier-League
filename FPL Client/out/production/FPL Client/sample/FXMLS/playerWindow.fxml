@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="mainPane" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.playerWindow">
+    <children>
+        <Pane fx:id="whitePane" layoutX="220.0" layoutY="50.0" prefHeight="750.0" prefWidth="980.0" />
+      <Pane layoutX="220.0" layoutY="50.0" prefHeight="750.0" prefWidth="980.0" style="-fx-background-color: rgba(25,150,255,.1); -fx-background-radius: 100 100 0 0;" />
+        <StackPane fx:id="playerWindow" layoutX="158.0" layoutY="50.0" prefHeight="750.0" prefWidth="980.0" translateX="60.0">
+            <children>
+                <Pane prefHeight="660.0" prefWidth="642.0" stylesheets="@../Styles/design.css">
+                    <children>
+                        <HBox layoutX="179.0" layoutY="183.0" prefHeight="29.0" prefWidth="642.0" spacing="15.0" style="-fx-background-radius: 0;" stylesheets="@../Styles/design.css">
+                            <children>
+                                <Button fx:id="btnhistory" mnemonicParsing="false" onMouseClicked="#handleMouseEvent" prefHeight="25.0" prefWidth="118.0" style="-fx-background-radius: 0 0 20 20;" styleClass="button2" stylesheets="@../Styles/design.css" text="History" textFill="#f8f7f7">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Button>
+                                <Button fx:id="btnfixture" mnemonicParsing="false" onMouseClicked="#handleMouseEvent" prefHeight="25.0" prefWidth="118.0" style="-fx-background-radius: 0 0 20 20;" styleClass="button2" stylesheets="@../Styles/design.css" text="Fixture" textFill="#fcf9f9">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                            <padding>
+                                <Insets left="200.0" />
+                            </padding>
+                        </HBox>
+                        <StackPane layoutY="221.0" prefHeight="529.0" prefWidth="980.0">
+                            <children>
+                                <Pane fx:id="fixturePane" maxHeight="497.0" opacity="0.0" prefHeight="445.0" prefWidth="642.0" style="-fx-background-color: transparent;">
+                                    <children>
+                                        <TableView fx:id="fixtureTable" layoutY="-1.0" prefHeight="497.0" prefWidth="980.0" stylesheets="@../Styles/fixtureView.css">
+                                            <columns>
+                                                <TableColumn fx:id="date" prefWidth="356.0" text="Date" />
+                                                <TableColumn fx:id="GW" prefWidth="251.0" text="GW" />
+                                                <TableColumn fx:id="opp" prefWidth="372.0" text="Opponent" />
+                                            </columns>
+                                        </TableView>
+                                    </children>
+                                </Pane>
+                                <Pane fx:id="historyPane" maxHeight="497.0" prefHeight="466.0" prefWidth="642.0" stylesheets="@../Styles/design.css">
+                                    <children>
+                                        <TableView fx:id="tableHistory" layoutY="-2.0" prefHeight="497.0" prefWidth="980.0" stylesheets="@../Styles/fixtureView.css">
+                                            <columns>
+                                                <TableColumn fx:id="gw" prefWidth="51.0" text="GW" />
+                                                <TableColumn fx:id="opponent" prefWidth="148.0" text="Opponent" />
+                                                <TableColumn fx:id="pts" prefWidth="60.0" text="Pts" />
+                                                <TableColumn fx:id="mp" prefWidth="60.0" text="MP" />
+                                                <TableColumn fx:id="gs" prefWidth="60.0" text="GS" />
+                                                <TableColumn fx:id="a" prefWidth="60.0" text="A" />
+                                                <TableColumn fx:id="cs" prefWidth="60.0" text="CS" />
+                                                <TableColumn fx:id="gc" prefWidth="60.0" text="GC" />
+                                                <TableColumn fx:id="og" prefWidth="60.0" text="OG" />
+                                                <TableColumn fx:id="rc" prefWidth="60.0" text="RC" />
+                                                <TableColumn fx:id="yc" prefWidth="60.0" text="YC" />
+                                                <TableColumn fx:id="pm" prefWidth="60.0" text="PM" />
+                                                <TableColumn fx:id="ps" prefWidth="60.0" text="PS" />
+                                                <TableColumn fx:id="s" prefWidth="60.0" text="S" />
+                                                <TableColumn fx:id="b" prefWidth="60.0" text="B" />
+                                            </columns>
+                                        </TableView>
+                                    </children>
+                                </Pane>
+                            </children>
+                        </StackPane>
+                        <Circle fx:id="btnClose1" fill="#ff451f" layoutX="55.0" layoutY="38.0" onMouseClicked="#handleMouseEvent" radius="12.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text fx:id="pname" fill="#fcf8f8" layoutX="212.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                            <font>
+                                <Font name="System Bold" size="24.0" />
+                            </font>
+                        </Text>
+                        <Button fx:id="btnpos" layoutX="212.0" layoutY="74.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="105.0" styleClass="button16" stylesheets="@../Styles/design.css" textFill="#faf7f7">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Button>
+                        <HBox layoutX="212.0" layoutY="116.0" prefHeight="67.0" prefWidth="593.0">
+                            <children>
+                                <VBox alignment="CENTER" prefHeight="67.0" prefWidth="76.0" spacing="8.0" style="-fx-border-color: white; -fx-background-radius: 0; -fx-border-radius: 0;" styleClass="textureButton" stylesheets="@../Styles/design.css">
+                                    <children>
+                                        <Text fill="#00ff87" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Price" textAlignment="CENTER" wrappingWidth="61.146484375">
+                                            <font>
+                                                <Font name="System Bold" size="14.0" />
+                                            </font>
+                                        </Text>
+                                        <Text fx:id="ccost" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0">
+                                            <font>
+                                                <Font name="System Bold" size="12.0" />
+                                            </font>
+                                        </Text>
+                                    </children>
+                                    <padding>
+                                        <Insets left="10.0" right="10.0" />
+                                    </padding>
+                                </VBox>
+                                <VBox alignment="CENTER" prefHeight="67.0" prefWidth="76.0" spacing="8.0" style="-fx-border-color: white; -fx-background-radius: 0; -fx-border-radius: 0;" styleClass="textureButton" stylesheets="@../Styles/design.css">
+                                    <children>
+                                        <Text fill="#00ff87" strokeType="OUTSIDE" strokeWidth="0.0" text="Selected" textAlignment="CENTER" wrappingWidth="61.146484375">
+                                            <font>
+                                                <Font name="System Bold" size="14.0" />
+                                            </font>
+                                        </Text>
+                                        <Text fx:id="psel" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0">
+                                            <font>
+                                                <Font name="System Bold" size="12.0" />
+                                            </font>
+                                        </Text>
+                                    </children>
+                                    <padding>
+                                        <Insets left="10.0" right="10.0" />
+                                    </padding>
+                                </VBox>
+                                <VBox alignment="CENTER" prefHeight="67.0" prefWidth="76.0" spacing="8.0" style="-fx-border-color: white; -fx-background-radius: 0; -fx-border-radius: 0;" styleClass="textureButton" stylesheets="@../Styles/design.css">
+                                    <children>
+                                        <Text fx:id="cgw" fill="#00ff87" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="61.146484375">
+                                            <font>
+                                                <Font name="System Bold" size="14.0" />
+                                            </font>
+                                        </Text>
+                                        <Text fx:id="cgwp" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0">
+                                            <font>
+                                                <Font name="System Bold" size="12.0" />
+                                            </font>
+                                        </Text>
+                                    </children>
+                                    <padding>
+                                        <Insets left="10.0" right="10.0" />
+                                    </padding>
+                                </VBox>
+                                <VBox alignment="CENTER" prefHeight="67.0" prefWidth="76.0" spacing="8.0" style="-fx-border-color: white; -fx-background-radius: 0; -fx-border-radius: 0;" styleClass="textureButton" stylesheets="@../Styles/design.css">
+                                    <children>
+                                        <Text fill="#00ff87" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Points" textAlignment="CENTER" wrappingWidth="61.146484375">
+                                            <font>
+                                                <Font name="System Bold" size="14.0" />
+                                            </font>
+                                        </Text>
+                                        <Text fx:id="tpoints" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0">
+                                            <font>
+                                                <Font name="System Bold" size="12.0" />
+                                            </font>
+                                        </Text>
+                                    </children>
+                                    <padding>
+                                        <Insets left="10.0" right="10.0" />
+                                    </padding>
+                                </VBox>
+                                <VBox alignment="CENTER" prefHeight="67.0" prefWidth="76.0" spacing="8.0" style="-fx-border-color: white; -fx-background-radius: 0; -fx-border-radius: 0;" styleClass="textureButton" stylesheets="@../Styles/design.css">
+                                    <children>
+                                        <Text fill="#00ff87" strokeType="OUTSIDE" strokeWidth="0.0" text="Bonus Points" textAlignment="CENTER" wrappingWidth="61.146484375">
+                                            <font>
+                                                <Font name="System Bold" size="14.0" />
+                                            </font>
+                                        </Text>
+                                        <Text fx:id="bp" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0">
+                                            <font>
+                                                <Font name="System Bold" size="12.0" />
+                                            </font>
+                                        </Text>
+                                    </children>
+                                    <padding>
+                                        <Insets left="10.0" right="10.0" />
+                                    </padding>
+                                </VBox>
+                                <VBox alignment="CENTER" prefHeight="67.0" prefWidth="76.0" spacing="8.0" style="-fx-border-color: white; -fx-background-radius: 0; -fx-border-radius: 0;" styleClass="textureButton" stylesheets="@../Styles/design.css">
+                                    <children>
+                                        <Text fx:id="agw" fill="#00ff87" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="61.146484375">
+                                            <font>
+                                                <Font name="System Bold" size="14.0" />
+                                            </font>
+                                        </Text>
+                                        <Text fx:id="agwo" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="-">
+                                            <font>
+                                                <Font name="System Bold" size="12.0" />
+                                            </font>
+                                        </Text>
+                                    </children>
+                                    <padding>
+                                        <Insets left="10.0" right="10.0" />
+                                    </padding>
+                                </VBox>
+                                <VBox alignment="CENTER" prefHeight="67.0" prefWidth="76.0" spacing="8.0" style="-fx-border-color: white; -fx-background-radius: 0; -fx-border-radius: 0;" styleClass="textureButton" stylesheets="@../Styles/design.css">
+                                    <children>
+                                        <Text fx:id="aagw" fill="#00ff87" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="61.146484375">
+                                            <font>
+                                                <Font name="System Bold" size="14.0" />
+                                            </font>
+                                        </Text>
+                                        <Text fx:id="aagwo" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="-">
+                                            <font>
+                                                <Font name="System Bold" size="12.0" />
+                                            </font>
+                                        </Text>
+                                    </children>
+                                    <padding>
+                                        <Insets left="10.0" right="10.0" />
+                                    </padding>
+                                </VBox>
+                            </children>
+                        </HBox>
+                        <Text fx:id="cname" fill="#f8f6f6" layoutX="675.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                            <font>
+                                <Font name="System Bold" size="17.0" />
+                            </font>
+                        </Text>
+                        <ImageView fitHeight="56.0" fitWidth="61.0" layoutX="468.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../icons/pl.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fx:id="imgTeam" fitHeight="56.0" fitWidth="61.0" layoutX="693.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../icons/pl.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </Pane>
+            </children>
+        </StackPane>
+    </children>
+</AnchorPane>

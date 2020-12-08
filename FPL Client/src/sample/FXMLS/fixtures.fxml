@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="750.0" prefWidth="980.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8.0.191" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.fixtures">
+    <children>
+        <ImageView fitHeight="602.0" fitWidth="946.0" layoutX="22.0" layoutY="139.0" opacity="0.0" pickOnBounds="true">
+            <image>
+                <Image url="@../photos/blurstat.jpg" />
+            </image>
+        </ImageView>
+        <TableView fx:id="fixtureTable" layoutX="85.0" layoutY="140.0" prefHeight="602.0" prefWidth="820.0" stylesheets="@../Styles/fixtureStyles.css">
+            <columns>
+                <TableColumn fx:id="hometeam" prefWidth="300.0" />
+                <TableColumn fx:id="hg" prefWidth="100.0" />
+                <TableColumn fx:id="ag" prefWidth="100.0" />
+                <TableColumn fx:id="awayteam" prefWidth="300.0" />
+            </columns>
+        </TableView>
+        <HBox alignment="TOP_CENTER" layoutX="104.0" layoutY="80.0" prefHeight="63.0" prefWidth="784.0" spacing="50.0">
+            <children>
+                <Button fx:id="btnprevious" mnemonicParsing="false" onMouseClicked="#handleMouseEvent" prefHeight="40.0" prefWidth="220.0" styleClass="button16" stylesheets="@../Styles/design.css" text="Previous" />
+                <Text fx:id="textGW" fill="#fcf8f8" strokeType="OUTSIDE" strokeWidth="0.0">
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                </Text>
+                <Button fx:id="btnnext" mnemonicParsing="false" onMouseClicked="#handleMouseEvent" prefHeight="40.0" prefWidth="220.0" styleClass="button16" stylesheets="@../Styles/design.css" text="Next" />
+            </children>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </HBox>
+        <Text fill="#fcfafa" layoutX="464.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fixtures">
+            <font>
+                <Font name="System Bold" size="30.0" />
+            </font>
+        </Text>
+        <ImageView fitHeight="60.0" fitWidth="65.0" layoutX="391.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../icons/pl.png" />
+            </image>
+        </ImageView>
+    </children>
+</AnchorPane>

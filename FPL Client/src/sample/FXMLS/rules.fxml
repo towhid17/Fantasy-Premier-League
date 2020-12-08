@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="750.0" prefWidth="980.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8.0.191" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.rules">
+    <children>
+        <StackPane layoutX="65.0" layoutY="24.0" prefHeight="714.0" prefWidth="867.0">
+            <children>
+                <VBox fx:id="Wmyleagues" prefHeight="714.0" prefWidth="844.0" style="-fx-background-color: Transparent;">
+                    <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="132.0" prefWidth="857.0" spacing="3.0" style="-fx-background-color: transparent;" stylesheets="@../Styles/design.css">
+                            <children>
+                                <Text fill="#f5f0f0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rules &amp; Help">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Text>
+                                <Text fill="#fffafa" strokeType="OUTSIDE" strokeWidth="0.0" text="Rules">
+                                    <font>
+                                        <Font name="System Bold" size="20.0" />
+                                    </font>
+                                </Text>
+                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="791.0" spacing="25.0">
+                                    <children>
+                                        <Button fx:id="btncreatejoin" mnemonicParsing="false" prefHeight="41.0" prefWidth="359.0" styleClass="button16" stylesheets="@../Styles/design.css" text="Rules" />
+                                        <Button mnemonicParsing="false" prefHeight="41.0" prefWidth="359.0" styleClass="button16" stylesheets="@../Styles/design.css" text="Help" />
+                                    </children>
+                                    <padding>
+                                        <Insets left="20.0" />
+                                    </padding>
+                                </HBox>
+                            </children>
+                            <padding>
+                                <Insets top="10.0" />
+                            </padding>
+                        </VBox>
+                        <ScrollPane prefHeight="582.0" prefWidth="874.0" stylesheets="@../Styles/scrollPane.css">
+                            <content>
+                                <VBox fx:id="VB0" prefHeight="581.0" prefWidth="848.0" spacing="15.0" style="-fx-background-color: transparent;">
+                                    <children>
+                                        <Button fx:id="btnEp1" mnemonicParsing="false" onMouseClicked="#expandSection" prefHeight="40.0" prefWidth="856.0" styleClass="button16" stylesheets="@../Styles/design.css" text="Selecting Your Initial Squad" textFill="#f7f5f5">
+                                            <font>
+                                                <Font name="System Bold" size="15.0" />
+                                            </font>
+                                        </Button>
+                                        <Button fx:id="btnEp11" mnemonicParsing="false" onMouseClicked="#expandSection" prefHeight="40.0" prefWidth="856.0" styleClass="button16" stylesheets="@../Styles/design.css" text="Managing Your Squad" textFill="#f7f5f5">
+                                            <font>
+                                                <Font name="System Bold" size="15.0" />
+                                            </font>
+                                        </Button>
+                                        <Button fx:id="btnEp12" mnemonicParsing="false" onMouseClicked="#expandSection" prefHeight="40.0" prefWidth="856.0" styleClass="button16" stylesheets="@../Styles/design.css" text="Transfers" textFill="#f7f5f5">
+                                            <font>
+                                                <Font name="System Bold" size="15.0" />
+                                            </font>
+                                        </Button>
+                                        <Button fx:id="btnEp13" mnemonicParsing="false" onMouseClicked="#expandSection" prefHeight="40.0" prefWidth="856.0" styleClass="button16" stylesheets="@../Styles/design.css" text="Chips" textFill="#f7f5f5">
+                                            <font>
+                                                <Font name="System Bold" size="15.0" />
+                                            </font>
+                                        </Button>
+                                        <Button fx:id="btnEp14" mnemonicParsing="false" onMouseClicked="#expandSection" prefHeight="40.0" prefWidth="856.0" styleClass="button16" stylesheets="@../Styles/design.css" text="Deadline" textFill="#f7f5f5">
+                                            <font>
+                                                <Font name="System Bold" size="15.0" />
+                                            </font>
+                                        </Button>
+                                        <Button fx:id="btnEp15" mnemonicParsing="false" onMouseClicked="#expandSection" prefHeight="40.0" prefWidth="856.0" styleClass="button16" stylesheets="@../Styles/design.css" text="Leagues" textFill="#f7f5f5">
+                                            <font>
+                                                <Font name="System Bold" size="15.0" />
+                                            </font>
+                                        </Button>
+                                        <Button fx:id="btnEp16" mnemonicParsing="false" onMouseClicked="#expandSection" prefHeight="40.0" prefWidth="856.0" styleClass="button16" stylesheets="@../Styles/design.css" text="Scoring" textFill="#f7f5f5">
+                                            <font>
+                                                <Font name="System Bold" size="15.0" />
+                                            </font>
+                                        </Button>
+                                        <Button fx:id="btnEp17" mnemonicParsing="false" onMouseClicked="#expandSection" prefHeight="40.0" prefWidth="856.0" styleClass="button16" stylesheets="@../Styles/design.css" text="Cup" textFill="#f7f5f5">
+                                            <font>
+                                                <Font name="System Bold" size="15.0" />
+                                            </font>
+                                        </Button>
+                                        <VBox fx:id="VB" prefHeight="43.0" prefWidth="848.0" style="-fx-background-color: rgba(255,255,255,.1); -fx-border-color: rgba(255,255,255,.4);">
+                                            <children>
+                                                <Text fx:id="text" fill="#fdfafa" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                                                    <font>
+                                                        <Font name="System Bold" size="14.0" />
+                                                    </font>
+                                                </Text>
+                                            </children>
+                                            <padding>
+                                                <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+                                            </padding>
+                                        </VBox>
+                                    </children>
+                                    <padding>
+                                        <Insets top="50.0" />
+                                    </padding>
+                                </VBox>
+                            </content>
+                        </ScrollPane>
+                    </children>
+                    <padding>
+                        <Insets right="-3.0" />
+                    </padding>
+                </VBox>
+            </children>
+        </StackPane>
+    </children>
+</AnchorPane>

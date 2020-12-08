@@ -1,0 +1,74 @@
+.GWUpdate{
+    -fx-background-radius: 200;
+    -fx-border-color: rgba(255,255,255, .08);
+    -fx-border-radius: 200;
+    -fx-border-width: 25;
+    -fx-background-color: #000034;
+    -fx-pref-width: 300;
+    -fx-pref-height: 300;
+}
+
+.GWUpdate:hover{
+    -fx-background-radius: 200;
+    -fx-border-color: rgba(255,255,255, .08);
+    -fx-border-radius: 200;
+    -fx-border-width: 25;
+    -fx-background-color: #13162b;
+    -fx-pref-width: 300;
+    -fx-pref-height: 300;
+}
+
+.vbox1{
+    -fx-background-color: rgba(40,44,76, 1);
+    -fx-background-radius: 20;
+}
+
+.back{
+    -fx-background-color: linear-gradient(to bottom right, #4e6c9c, #499249);
+    -fx-background-radius: 30 200 200 30;
+}
+
+.right{
+    /*-fx-background-color: rgba(255,255,255,.05);*/
+    -fx-background-color: rgba(0,0,0,.2);
+}
+
+.rightbox{
+    -fx-background-radius: 20;
+    -fx-background-color: rgba(55, 63, 120, .6);
+}
+
+.left{
+    /*-fx-background-color: rgba(255,255,255,.05);*/
+    -fx-background-color: rgba(0,0,0,.2);
+}
+
+.toptab1{
+    -fx-background-color: linear-gradient(to right bottom, rgba(84,93,172, 1),rgba(84,93,172, 1)) ;
+    -fx-background-radius: 0 0 20 20;
+}
+
+.toptab2{
+    -fx-background-color: #313868;
+    -fx-background-radius: 0 0 20 20;
+}
+
+.buttonClose{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-background-radius: 0;
+}
+
+.buttonClose:hover{
+    -fx-background-color: rgba(140,0,0,.8);
+}
+
+.buttonMin{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-background-radius: 0;
+}
+
+.buttonMin:hover{
+    -fx-background-color: rgba(120,120,120,.4);
+}

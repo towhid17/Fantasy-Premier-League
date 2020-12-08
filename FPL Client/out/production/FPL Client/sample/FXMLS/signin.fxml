@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="ancRoot" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #37003C;" xmlns="http://javafx.com/javafx/8.0.191" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.signin">
+    <children>
+        <BorderPane prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #fff;">
+            <left>
+                <Pane prefHeight="800.0" prefWidth="471.0" stylesheets="@../Styles/design.css" BorderPane.alignment="CENTER" />
+            </left>
+            <center>
+                <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Pane fx:id="pnlSignup" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #37003C;">
+                            <children>
+                                <ImageView fitHeight="800.0" fitWidth="1209.0" layoutX="-473.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../photos/signinback.jpg" />
+                                    </image>
+                                </ImageView>
+                                <Button fx:id="btnGetStarted" layoutX="229.0" layoutY="623.0" mnemonicParsing="false" onAction="#getStartedAction" prefHeight="40.0" prefWidth="336.0" styleClass="button16" stylesheets="@../Styles/design.css" text="Get Started" textFill="WHITE">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Button>
+                                <Text fill="#f8f6f6" layoutX="335.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign up">
+                                    <font>
+                                        <Font name="System Bold" size="30.0" />
+                                    </font>
+                                </Text>
+                                <ImageView fx:id="btnBack" fitHeight="46.0" fitWidth="46.0" layoutX="183.0" layoutY="88.0" onMouseClicked="#handleMouseEvent" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../icons/back.png" />
+                                    </image>
+                                </ImageView>
+                                <Text fx:id="signupPromptText" fill="#f5adad" layoutX="229.0" layoutY="591.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </Text>
+                                <VBox layoutX="180.0" layoutY="200.0" prefHeight="376.0" prefWidth="425.0" spacing="30.0">
+                                    <children>
+                                        <TextField fx:id="username" prefHeight="50.0" prefWidth="360.0" promptText="Username" styleClass="textfield" stylesheets="@../Styles/design.css">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font>
+                                            <effect>
+                                                <InnerShadow />
+                                            </effect>
+                                        </TextField>
+                                        <TextField fx:id="email" prefHeight="50.0" prefWidth="360.0" promptText="Email" styleClass="textfield" stylesheets="@../Styles/design.css">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font>
+                                            <effect>
+                                                <InnerShadow />
+                                            </effect>
+                                        </TextField>
+                                        <HBox prefHeight="51.0" prefWidth="348.0" spacing="10.0">
+                                            <children>
+                                                <TextField fx:id="firstname" prefHeight="50.0" prefWidth="360.0" promptText="First name" styleClass="textfield" stylesheets="@../Styles/design.css">
+                                                    <font>
+                                                        <Font size="15.0" />
+                                                    </font>
+                                                    <effect>
+                                                        <InnerShadow />
+                                                    </effect>
+                                                </TextField>
+                                                <TextField fx:id="lastname" prefHeight="50.0" prefWidth="360.0" promptText="Last name" styleClass="textfield" stylesheets="@../Styles/design.css">
+                                                    <font>
+                                                        <Font size="15.0" />
+                                                    </font>
+                                                    <effect>
+                                                        <InnerShadow />
+                                                    </effect>
+                                                </TextField>
+                                            </children>
+                                        </HBox>
+                                        <PasswordField fx:id="password" prefHeight="50.0" prefWidth="360.0" promptText="Password" styleClass="textfield" stylesheets="@../Styles/design.css">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                            <effect>
+                                                <InnerShadow />
+                                            </effect>
+                                        </PasswordField>
+                                        <PasswordField fx:id="repassword" prefHeight="50.0" prefWidth="360.0" promptText="Confirm Password" styleClass="textfield" stylesheets="@../Styles/design.css">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                            <effect>
+                                                <InnerShadow />
+                                            </effect>
+                                        </PasswordField>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </Pane>
+                        <Pane fx:id="pnlSignin" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #37003C;" stylesheets="@../Styles/design.css">
+                            <children>
+                                <ImageView fitHeight="800.0" fitWidth="1200.0" layoutX="-472.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../photos/signinback.jpg" />
+                                    </image>
+                                </ImageView>
+                                <TextField fx:id="signinUsername" layoutX="189.0" layoutY="254.0" prefHeight="50.0" prefWidth="360.0" promptText="Username" styleClass="textfield" stylesheets="@../Styles/design.css">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                    <effect>
+                                        <InnerShadow />
+                                    </effect>
+                                </TextField>
+                                <PasswordField fx:id="signinPassword" layoutX="189.0" layoutY="355.0" prefHeight="50.0" prefWidth="360.0" promptText="Password" styleClass="textfield" stylesheets="@../Styles/design.css">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                    <effect>
+                                        <InnerShadow />
+                                    </effect>
+                                </PasswordField>
+                                <Button fx:id="btnSignin" layoutX="395.0" layoutY="461.0" mnemonicParsing="false" onAction="#signinAction" prefHeight="40.0" prefWidth="153.0" styleClass="button16" stylesheets="@../Styles/design.css" text="Sign In" textFill="WHITE">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Button>
+                                <Button fx:id="btnSignup" layoutX="209.0" layoutY="602.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="40.0" prefWidth="336.0" styleClass="button16" stylesheets="@../Styles/design.css" text="Sign up" textFill="WHITE">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Button>
+                                <Text fill="#f8e9e9" layoutX="221.0" layoutY="584.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't hve a account" />
+                                <Text fill="#f8eaea" layoutX="224.0" layoutY="485.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Forgot Password" />
+                                <Text fx:id="signinPromptText" fill="#f5adad" layoutX="250.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </Text>
+                                <Text fill="#f8f7f7" layoutX="315.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign in">
+                                    <font>
+                                        <Font name="System Bold" size="30.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                        </Pane>
+                    </children>
+                </StackPane>
+            </center>
+        </BorderPane>
+        <ImageView fitHeight="277.0" fitWidth="295.0" layoutX="96.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../icons/pl.png" />
+            </image>
+            <effect>
+                <ColorAdjust brightness="-0.49" contrast="-0.32" hue="-0.49" saturation="1.0" />
+            </effect>
+        </ImageView>
+        <Text fill="#37003c" layoutX="110.0" layoutY="470.0" stroke="#513434" strokeType="OUTSIDE" strokeWidth="0.0" text="Fantasy Premier League Version 2.0" textAlignment="CENTER" wrappingWidth="268.345703125">
+            <font>
+                <Font name="Arial Bold" size="35.0" />
+            </font>
+        </Text>
+        <HBox layoutX="30.0" layoutY="15.0" prefHeight="15.0" prefWidth="65.0" spacing="10.0">
+            <children>
+                <Circle fx:id="btnClose" fill="#ff451f" onMouseClicked="#handleMouseEvent" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+                <Circle fill="#ffce1f" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+                <Circle fill="DODGERBLUE" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>

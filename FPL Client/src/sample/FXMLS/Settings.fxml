@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8.0.191" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.settings">
+    <children>
+        <Pane opacity="0.9" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #000021;" />
+        <Pane layoutX="21.0" layoutY="121.0" prefHeight="665.0" prefWidth="203.0" style="-fx-background-color: transparent; -fx-background-radius: 0; -fx-border-color: linear-gradient(to bottom left, #E9FF01, #76FF44, #04FF84, #76FF44, #E9FF01);" stylesheets="@../Styles/design.css" />
+        <AnchorPane fx:id="topane1" opacity="0.85" prefHeight="50.0" prefWidth="1200.0" style="-fx-background-radius: 0 0 30 30; -fx-background-color: transparent; -fx-border-radius: 0 0 30 30; -fx-border-width: 4;" stylesheets="@../Styles/design.css" />
+        <Pane layoutX="22.0" layoutY="62.0" opacity="0.33" prefHeight="50.0" prefWidth="206.0" style="-fx-background-color: #364C76;" />
+        <Pane layoutX="228.0" layoutY="64.0" opacity="0.33" prefHeight="723.0" prefWidth="948.0" style="-fx-background-color: #364C76;" />
+        <AnchorPane prefHeight="800.0" prefWidth="208.0" style="-fx-background-color: transparent;" stylesheets="@../Styles/design.css">
+            <children>
+                <VBox alignment="TOP_CENTER" layoutX="21.0" layoutY="60.0" prefHeight="219.0" prefWidth="200.0" spacing="6.0">
+                    <children>
+                        <Button fx:id="leagues" mnemonicParsing="false" onMouseClicked="#handleMouseEvent" prefHeight="54.0" prefWidth="195.0" style="-fx-background-color: transparent;" text="Themes" textFill="#f5f4f4">
+                            <font>
+                                <Font name="System Bold" size="16.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btnhome" mnemonicParsing="false" onMouseClicked="#handleMouseEvent" prefHeight="55.0" prefWidth="200.0" styleClass="button10" text="Home" textFill="#fffefe">
+                            <font>
+                                <Font name="System Bold" size="16.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="fixtures" mnemonicParsing="false" onMouseClicked="#handleMouseEvent" prefHeight="55.0" prefWidth="200.0" styleClass="button10" text="Account Settings" textFill="#fffefe">
+                            <font>
+                                <Font name="System Bold" size="16.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="statistics" mnemonicParsing="false" onMouseClicked="#handleMouseEvent" prefHeight="56.0" prefWidth="200.0" styleClass="button10" text="Terms and Conditions" textFill="#f8f7f7">
+                            <font>
+                                <Font name="System Bold" size="16.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+        <AnchorPane prefHeight="50.0" prefWidth="1200.0" style="-fx-background-color: transparent; -fx-background-radius: 0 0 30 30; -fx-border-color: linear-gradient(to bottom left, #E9FF01, #76FF44, #04FF84, #76FF44, #E9FF01); -fx-border-radius: 0 0 30 30; -fx-border-width: 4;" stylesheets="@../Styles/design.css">
+            <children>
+                <ImageView fitHeight="36.0" fitWidth="37.0" layoutX="582.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../icons/pl.png" />
+                    </image>
+                    <effect>
+                        <ColorAdjust brightness="1.0" />
+                    </effect>
+                </ImageView>
+                <Text fill="#f8f7f7" layoutX="490.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FPL2.0">
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                </Text>
+                <Text fill="#f8f8f8" layoutX="636.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Settings">
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                </Text>
+            </children>
+        </AnchorPane>
+        <VBox alignment="CENTER" layoutX="284.0" layoutY="286.0" prefHeight="124.0" prefWidth="140.0">
+            <children>
+                <ColorPicker fx:id="colorpicker" prefHeight="42.0" prefWidth="370.0" style="-fx-background-color: rgba(255,255,255,.3); -fx-border-color: white;" stylesheets="@../Styles/design.css" />
+                <Button fx:id="btncpset" mnemonicParsing="false" onMouseClicked="#handleMouseEvent" prefHeight="42.0" prefWidth="370.0" style="-fx-background-radius: 0 0 20 20;" styleClass="button16" stylesheets="@../Styles/design.css" text="Set " />
+            </children>
+        </VBox>
+        <Pane layoutX="282.0" layoutY="118.0" prefHeight="107.0" prefWidth="140.0" style="-fx-border-color: linear-gradient(to bottom, rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0),#00004d, #00006d); -fx-border-radius: 20; -fx-border-width: 10;" />
+        <Pane layoutX="452.0" layoutY="118.0" prefHeight="107.0" prefWidth="140.0" style="-fx-border-color: linear-gradient(to bottom, rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0),#AA000B, #710007); -fx-border-radius: 20; -fx-border-width: 10;" />
+        <Pane layoutX="622.0" layoutY="118.0" prefHeight="107.0" prefWidth="140.0" style="-fx-border-color: linear-gradient(to bottom, rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0),gray, white); -fx-border-radius: 20; -fx-border-width: 10;" />
+        <Pane layoutX="792.0" layoutY="118.0" prefHeight="107.0" prefWidth="140.0" style="-fx-border-color: linear-gradient(to bottom, rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0),gray, gray); -fx-border-radius: 20; -fx-border-width: 10;" />
+        <Pane layoutX="962.0" layoutY="118.0" prefHeight="107.0" prefWidth="140.0" style="-fx-border-color: linear-gradient(to bottom, rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0),black, black); -fx-border-radius: 20; -fx-border-width: 10;" />
+        <HBox layoutX="242.0" layoutY="115.0" prefHeight="135.0" prefWidth="924.0" spacing="50.0">
+            <children>
+                <Button fx:id="btnt1" mnemonicParsing="false" onMouseClicked="#handleMouseEvent" prefHeight="100.0" prefWidth="120.0" styleClass="button11" stylesheets="@../Styles/design.css" text="DarkBlue">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnt6" mnemonicParsing="false" onMouseClicked="#handleMouseEvent" prefHeight="100.0" prefWidth="120.0" styleClass="button11" stylesheets="@../Styles/design.css" text="BlueRed">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnt5" mnemonicParsing="false" onMouseClicked="#handleMouseEvent" prefHeight="100.0" prefWidth="120.0" styleClass="button11" stylesheets="@../Styles/design.css" text="Light">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnt3" mnemonicParsing="false" onMouseClicked="#handleMouseEvent" prefHeight="100.0" prefWidth="120.0" styleClass="button11" stylesheets="@../Styles/design.css" text="Gray">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnt4" mnemonicParsing="false" onMouseClicked="#handleMouseEvent" prefHeight="100.0" prefWidth="120.0" styleClass="button11" stylesheets="@../Styles/design.css" text="Dark">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+            </children>
+            <padding>
+                <Insets left="50.0" />
+            </padding>
+        </HBox>
+        <HBox layoutX="30.0" layoutY="15.0" prefHeight="15.0" prefWidth="65.0" spacing="10.0">
+            <children>
+                <Circle fx:id="btnClose" fill="#ff451f" onMouseClicked="#handleMouseEvent" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+                <Circle fill="#ffce1f" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+                <Circle fill="DODGERBLUE" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+            </children>
+        </HBox>
+        <Line endX="1156.0" layoutX="21.0" layoutY="63.0" style="-fx-stroke: linear-gradient(to bottom left, #E9FF01, #76FF44, #04FF84, #76FF44, #E9FF01); -fx-stroke-width: 2;" />
+        <Line endY="50.0" layoutX="21.0" layoutY="63.0" style="-fx-stroke: linear-gradient(to bottom left, #E9FF01, #76FF44, #04FF84, #76FF44, #E9FF01); -fx-stroke-width: 2;" />
+        <Line endX="210.0" layoutX="21.0" layoutY="113.0" style="-fx-stroke: linear-gradient(to bottom left, #E9FF01, #76FF44, #04FF84, #76FF44, #E9FF01); -fx-stroke-width: 2;" />
+        <Line endY="721.0" layoutX="1177.0" layoutY="63.0" style="-fx-stroke: linear-gradient(to bottom left, #E9FF01, #76FF44, #04FF84, #76FF44, #E9FF01); -fx-stroke-width: 2;" />
+        <Line endY="670.0" layoutX="231.0" layoutY="113.0" style="-fx-stroke: linear-gradient(to bottom left, #E9FF01, #76FF44, #04FF84, #76FF44, #E9FF01); -fx-stroke-width: 2;" />
+        <Line endX="946.0" layoutX="231.0" layoutY="785.0" style="-fx-stroke: linear-gradient(to bottom left, #E9FF01, #76FF44, #04FF84, #76FF44, #E9FF01); -fx-stroke-width: 2;" />
+    </children>
+</AnchorPane>

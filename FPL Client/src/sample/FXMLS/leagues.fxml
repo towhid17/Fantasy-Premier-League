@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="750.0" prefWidth="980.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.leagues">
+    <children>
+        <ImageView fx:id="itable" fitHeight="634.0" fitWidth="950.0" layoutX="16.0" layoutY="118.0" opacity="0.0" pickOnBounds="true" rotate="180.0">
+            <image>
+                <Image url="@../photos/statusBlur3.png" />
+            </image>
+            <effect>
+                <ColorAdjust brightness="-0.5" hue="-0.07" saturation="0.29" />
+            </effect>
+            <rotationAxis>
+                <Point3D y="1.0" />
+            </rotationAxis>
+        </ImageView>
+        <ImageView fx:id="leagueSettingsImg" fitHeight="562.0" fitWidth="950.0" layoutX="16.0" layoutY="174.0" opacity="0.0" pickOnBounds="true">
+            <image>
+                <Image url="@../photos/blurstat.jpg" />
+            </image>
+            <effect>
+                <ColorAdjust brightness="-0.29" hue="-0.07" saturation="0.29" />
+            </effect>
+        </ImageView>
+        <Button fx:id="btnBack" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#handleLeaguesButton" styleClass="button13" stylesheets="@../Styles/design.css" text="&lt;&lt;">
+            <font>
+                <Font name="Impact" size="16.0" />
+            </font>
+        </Button>
+        <Rectangle fx:id="recttest" arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="36.0" layoutX="66.0" layoutY="157.0" stroke="#f4f2f2" strokeType="INSIDE" strokeWidth="0.0" width="852.0" />
+        <StackPane layoutX="16.0" layoutY="24.0" prefHeight="714.0" prefWidth="950.0">
+            <children>
+                <VBox fx:id="leagueWindow" opacity="0.0" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: transparent;">
+                    <children>
+                        <HBox alignment="CENTER" prefHeight="52.0" prefWidth="950.0" stylesheets="@../Styles/design.css">
+                            <children>
+                                <Text fill="#fcf9f9" strokeType="OUTSIDE" strokeWidth="0.0" text="Private Classic League">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="41.0" prefWidth="950.0" style="-fx-background-color: rgba(255,255,255,.1); -fx-background-radius: 30 30 0 0;">
+                            <children>
+                                <Text fill="#fcf9f9" strokeType="OUTSIDE" strokeWidth="0.0" text="MyClassicLeague">
+                                    <font>
+                                        <Font name="System Bold" size="22.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                        </HBox>
+                        <TableView fx:id="LeagueTable" layoutY="-5.0" onMouseClicked="#teamWindowPopup" prefHeight="618.0" prefWidth="950.0" stylesheets="@../Styles/leagueTable.css">
+                            <columns>
+                                <TableColumn fx:id="ltrank" prefWidth="108.0" text="Rank" />
+                                <TableColumn fx:id="rankindicator2" prefWidth="53.0" />
+                                <TableColumn fx:id="ltname" prefWidth="359.84910583496094" text="Team Name" />
+                                <TableColumn fx:id="ltpoints" prefWidth="155.47161865234375" text="Current GW Points" />
+                                <TableColumn fx:id="tpoints" maxWidth="204.07537841796875" prefWidth="189.58477783203125" text="Total Points" />
+                                <TableColumn fx:id="id" minWidth="0.0" prefWidth="1.0" sortable="false" text="id" visible="false" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </VBox>
+                <VBox fx:id="WOption" opacity="0.0" prefHeight="661.0" prefWidth="867.0" style="-fx-background-color: transparent;">
+                    <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="719.0" prefWidth="868.0" spacing="25.0" style="-fx-border-color: rgba(255,255,255,.5);">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="46.0" prefWidth="862.0" style="-fx-background-color: rgba(255,255,255,.3);">
+                                    <children>
+                                        <Text fill="#fdfbfb" strokeType="OUTSIDE" strokeWidth="0.0" text="League Settings">
+                                            <font>
+                                                <Font name="System Bold" size="25.0" />
+                                            </font>
+                                        </Text>
+                                    </children>
+                                </HBox>
+                                <Text fx:id="LSname" fill="#fdfbfb" strokeType="OUTSIDE" strokeWidth="0.0" text="League Name:">
+                                    <font>
+                                        <Font name="System Bold" size="20.0" />
+                                    </font>
+                                </Text>
+                                <Text fx:id="LStype" fill="#fdfbfb" strokeType="OUTSIDE" strokeWidth="0.0" text="League Type">
+                                    <font>
+                                        <Font name="System Bold" size="20.0" />
+                                    </font>
+                                </Text>
+                                <Text fx:id="LScode" fill="#fdfbfb" strokeType="OUTSIDE" strokeWidth="0.0" text="League Code:">
+                                    <font>
+                                        <Font name="System Bold" size="20.0" />
+                                    </font>
+                                </Text>
+                                <Button fx:id="btnDeleteLeague" mnemonicParsing="false" onMouseClicked="#handleLeaguesButton" prefHeight="38.0" prefWidth="182.0" styleClass="button16" stylesheets="@../Styles/design.css" text="Delete League" />
+                            </children>
+                        </VBox>
+                    </children>
+                    <padding>
+                        <Insets top="150.0" />
+                    </padding>
+                </VBox>
+                <VBox fx:id="teamWindow" alignment="CENTER" layoutY="-15.0" prefHeight="744.0" prefWidth="950.0" style="-fx-background-color: transparent;">
+                    <children>
+                        <BorderPane fx:id="teamBorderPane" prefHeight="716.0" prefWidth="950.0" />
+                    </children>
+                </VBox>
+                <VBox fx:id="Wcreate" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                    <children>
+                        <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../icons/pl.png" />
+                            </image>
+                        </ImageView>
+                        <HBox fx:id="toptitle" alignment="CENTER" prefHeight="96.0" prefWidth="950.0" stylesheets="@../Styles/design.css">
+                            <children>
+                                <Text fx:id="Wtitle" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Create and Join new Leagues">
+                                    <font>
+                                        <Font name="System Bold" size="25.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                        </HBox>
+                        <StackPane prefHeight="713.0" prefWidth="867.0">
+                            <children>
+                                <VBox fx:id="Wcreateleagues" alignment="CENTER" opacity="0.0" prefHeight="200.0" prefWidth="100.0" spacing="50.0">
+                                    <children>
+                                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="15.0">
+                                            <children>
+                                                <Text fill="#fcf9f9" strokeType="OUTSIDE" strokeWidth="0.0" text="Classic scoring">
+                                                    <font>
+                                                        <Font size="18.0" />
+                                                    </font>
+                                                </Text>
+                                                <Text fill="#fcf9f9" strokeType="OUTSIDE" strokeWidth="0.0" text="In a league with classic scoring, teams are ranked based on their total points in the game. You can join or leave a league with classic scoring at any point during the season." textAlignment="CENTER" wrappingWidth="616.22265625" />
+                                                <Button fx:id="btncreateclassic" mnemonicParsing="false" onMouseClicked="#handleLeaguesButton" styleClass="button16" stylesheets="@../Styles/design.css" text="Create classic league" />
+                                            </children>
+                                        </VBox>
+                                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="15.0">
+                                            <children>
+                                                <Text fill="#fcf9f9" strokeType="OUTSIDE" strokeWidth="0.0" text="Head-to-Head scoring">
+                                                    <font>
+                                                        <Font size="18.0" />
+                                                    </font>
+                                                </Text>
+                                                <Text fill="#fcf9f9" strokeType="OUTSIDE" strokeWidth="0.0" text="In a league with head-to-head scoring, every team plays a match against another team in the league each Round. The match result is based on the Round score of each team minus any transfer points spent preparing for the Round.The Head-to-Head schedule is generated at the start of the league's first Round. Once the schedule has been generated the league is locked and teams will not be able to join or leave." textAlignment="CENTER" wrappingWidth="646.22265625" />
+                                                <Button fx:id="btncreatehth" mnemonicParsing="false" onMouseClicked="#handleLeaguesButton" styleClass="button16" stylesheets="@../Styles/design.css" text="Create head-to-head league" />
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </VBox>
+                                <VBox fx:id="Wjoincreate" alignment="CENTER" opacity="0.0" prefHeight="200.0" prefWidth="100.0" spacing="50.0">
+                                    <children>
+                                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="15.0">
+                                            <children>
+                                                <Text fill="#fcf9f9" strokeType="OUTSIDE" strokeWidth="0.0" text="Join an existing league">
+                                                    <font>
+                                                        <Font size="18.0" />
+                                                    </font>
+                                                </Text>
+                                                <Text fill="#fcf9f9" strokeType="OUTSIDE" strokeWidth="0.0" text="Join a private or public league to compete against friends and other game players." />
+                                                <Button fx:id="btnjoinaleague" mnemonicParsing="false" onMouseClicked="#handleLeaguesButton" styleClass="button16" stylesheets="@../Styles/design.css" text="Join a League" />
+                                            </children>
+                                        </VBox>
+                                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="15.0">
+                                            <children>
+                                                <Text fill="#fcf9f9" strokeType="OUTSIDE" strokeWidth="0.0" text="Create a new league">
+                                                    <font>
+                                                        <Font size="18.0" />
+                                                    </font>
+                                                </Text>
+                                                <Text fill="#fcf9f9" strokeType="OUTSIDE" strokeWidth="0.0" text="Create a private league to compete against friends." />
+                                                <Button fx:id="btncreatealeague" mnemonicParsing="false" onMouseClicked="#handleLeaguesButton" styleClass="button16" stylesheets="@../Styles/design.css" text="Create a League" />
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </VBox>
+                                <VBox fx:id="Wjoinclassicfinal" alignment="CENTER" opacity="0.0" prefHeight="200.0" prefWidth="100.0" spacing="50.0">
+                                    <children>
+                                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="15.0">
+                                            <children>
+                                                <Text fx:id="TF" fill="#f2efef" strokeType="OUTSIDE" strokeWidth="0.0" text="League Code">
+                                                    <font>
+                                                        <Font size="15.0" />
+                                                    </font></Text>
+                                                <TextField fx:id="TFjoinclassic" prefHeight="32.0" prefWidth="365.0" promptText="League Code" style="-fx-background-color: transparent; -fx-border-color: white;" stylesheets="@../Styles/design.css" />
+                                                <Button fx:id="btnjoinclassicfinal" mnemonicParsing="false" onMouseClicked="#handleLeaguesButton" styleClass="button16" stylesheets="@../Styles/design.css" text="Join League" />
+                                            </children>
+                                            <padding>
+                                                <Insets left="250.0" right="250.0" />
+                                            </padding>
+                                        </VBox>
+                                    </children>
+                                </VBox>
+                                <VBox fx:id="Wcreateclassicfinal" alignment="CENTER" opacity="0.0" prefHeight="200.0" prefWidth="100.0" spacing="50.0">
+                                    <children>
+                                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="867.0" spacing="8.0">
+                                            <children>
+                                                <Text fill="#f8f6f6" strokeType="OUTSIDE" strokeWidth="0.0" text="League Name">
+                                                    <font>
+                                                        <Font name="System Bold" size="18.0" />
+                                                    </font>
+                                                </Text>
+                                                <TextField fx:id="TFcreateclassic" prefHeight="41.0" prefWidth="365.0" promptText="league name" style="-fx-background-color: transparent; -fx-border-color: white;" stylesheets="@../Styles/design.css" />
+                                                <Text fill="#f8f6f6" strokeType="OUTSIDE" strokeWidth="0.0" text="Scoring Start">
+                                                    <font>
+                                                        <Font name="System Bold" size="18.0" />
+                                                    </font>
+                                                </Text>
+                                                <ComboBox fx:id="ScoreGWCombo" prefHeight="25.0" prefWidth="177.0" promptText="Gameweek" style="-fx-background-color: transparent; -fx-border-color: white;" stylesheets="@../Styles/comboboxStyles.css" />
+                                                <Button fx:id="btncreateclassicfinal" mnemonicParsing="false" onMouseClicked="#handleLeaguesButton" styleClass="button16" stylesheets="@../Styles/design.css" text="Create League" />
+                                            </children>
+                                            <padding>
+                                                <Insets left="250.0" right="250.0" />
+                                            </padding>
+                                        </VBox>
+                                    </children>
+                                </VBox>
+                        <VBox fx:id="h2hfinal" alignment="CENTER" opacity="0.0" prefHeight="200.0" prefWidth="100.0" spacing="50.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="867.0" spacing="8.0">
+                                 <children>
+                                    <Text fill="#f8f6f6" strokeType="OUTSIDE" strokeWidth="0.0" text="League Name">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField fx:id="TFcreateclassic1" prefHeight="41.0" prefWidth="365.0" promptText="league name" style="-fx-background-color: transparent; -fx-border-color: white;" stylesheets="@../Styles/design.css" />
+                                    <Text fill="#f8f6f6" strokeType="OUTSIDE" strokeWidth="0.0" text="Scoring Start">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <ComboBox fx:id="ScoreGWCombo1" prefHeight="25.0" prefWidth="177.0" promptText="Gameweek" style="-fx-background-color: transparent; -fx-border-color: white;" stylesheets="@../Styles/comboboxStyles.css" />
+                                    <Button fx:id="creath2hfinal" mnemonicParsing="false" onMouseClicked="#handleLeaguesButton" styleClass="button16" stylesheets="@../Styles/design.css" text="Create League" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="250.0" right="250.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </VBox>
+                                <VBox fx:id="Wjoinleagues" alignment="CENTER" opacity="0.0" prefHeight="200.0" prefWidth="100.0" spacing="50.0">
+                                    <children>
+                                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="15.0">
+                                            <children>
+                                                <Text fill="#f8f5f5" strokeType="OUTSIDE" strokeWidth="0.0" text="Private leagues">
+                                                    <font>
+                                                        <Font size="18.0" />
+                                                    </font>
+                                                </Text>
+                                                <Text fill="#f8f5f5" strokeType="OUTSIDE" strokeWidth="0.0" text="Join a private league if somebody has given you a league code to enter." />
+                                                <Button fx:id="btnjoinprivateleague" mnemonicParsing="false" onMouseClicked="#handleLeaguesButton" styleClass="button16" stylesheets="@../Styles/design.css" text="Join Private Classic League" />
+                                            </children>
+                                        </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="15.0">
+                                 <children>
+                                    <Text fill="#f8f5f5" strokeType="OUTSIDE" strokeWidth="0.0" text="Private leagues">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="#f8f5f5" strokeType="OUTSIDE" strokeWidth="0.0" text="Join a private league if somebody has given you a league code to enter." />
+                                    <Button fx:id="btnjoinprivateleague1" mnemonicParsing="false" onMouseClicked="#handleLeaguesButton" styleClass="button16" stylesheets="@../Styles/design.css" text="Join Private Head to Head League" />
+                                 </children>
+                              </VBox>
+                                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="15.0">
+                                            <children>
+                                                <Text fill="#f8f5f5" strokeType="OUTSIDE" strokeWidth="0.0" text="Public leagues">
+                                                    <font>
+                                                        <Font size="18.0" />
+                                                    </font>
+                                                </Text>
+                                                <Text fill="#f8f5f5" strokeType="OUTSIDE" strokeWidth="0.0" text="Join a public league to play against a small, randomly selected group of other game players." />
+                                                <Button fx:id="btnjoinpublicleague" mnemonicParsing="false" onMouseClicked="#handleLeaguesButton" styleClass="button16" stylesheets="@../Styles/design.css" text="Join Public League" />
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </VBox>
+                        <VBox fx:id="Wjoinclassicfinal1" alignment="CENTER" opacity="0.0" prefHeight="200.0" prefWidth="100.0" spacing="50.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="15.0">
+                                 <children>
+                                    <Text fx:id="TF1" fill="#f2efef" strokeType="OUTSIDE" strokeWidth="0.0" text="League Code">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField fx:id="TFjoinclassic1" prefHeight="32.0" prefWidth="365.0" promptText="League Code" style="-fx-background-color: transparent; -fx-border-color: white;" stylesheets="@../Styles/design.css" />
+                                    <Button fx:id="btnjoinclassicfinal1" mnemonicParsing="false" onMouseClicked="#handleLeaguesButton" styleClass="button16" stylesheets="@../Styles/design.css" text="Join League" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="250.0" right="250.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </VBox>
+                            </children>
+                        </StackPane>
+                    </children>
+                </VBox>
+                <VBox fx:id="Wmyleagues" opacity="0.0" prefHeight="714.0" prefWidth="844.0" style="-fx-background-color: Transparent;">
+                    <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="94.0" prefWidth="953.0" spacing="3.0" style="-fx-background-color: transparent;" stylesheets="@../Styles/design.css">
+                            <children>
+                                <Text fill="#fffafa" strokeType="OUTSIDE" strokeWidth="0.0" text="Gama">
+                                    <font>
+                                        <Font name="System Bold" size="20.0" />
+                                    </font>
+                                </Text>
+                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="791.0" spacing="75.0">
+                                    <children>
+                                        <Button fx:id="btncreatejoin" mnemonicParsing="false" onMouseClicked="#handleLeaguesButton" prefHeight="30.0" prefWidth="280.0" styleClass="button16" stylesheets="@../Styles/design.css" text="Create and Join new leagues">
+                                            <font>
+                                                <Font name="System Bold" size="12.0" />
+                                            </font></Button>
+                                        <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="280.0" styleClass="button16" stylesheets="@../Styles/design.css" text="Renew Your Leagues">
+                                            <font>
+                                                <Font name="System Bold" size="12.0" />
+                                            </font></Button>
+                                    </children>
+                                    <padding>
+                                        <Insets left="20.0" />
+                                    </padding>
+                                </HBox>
+                            </children>
+                            <padding>
+                                <Insets top="10.0" />
+                            </padding>
+                        </VBox>
+                        <ScrollPane prefHeight="620.0" prefWidth="953.0" stylesheets="@../Styles/scrollPane.css">
+                            <content>
+                                <VBox fx:id="wmlVB" prefHeight="1100.0" prefWidth="950.0" spacing="15.0" style="-fx-background-color: transparent;">
+                                    <children>
+                                        <VBox fx:id="WmlVB1" prefHeight="200.0" prefWidth="938.0">
+                                            <children>
+                                                <HBox alignment="CENTER" prefHeight="37.0" prefWidth="853.0" style="-fx-background-color: rgba(255,255,255,.1); -fx-background-radius: 30 30 0 0;">
+                                                    <children>
+                                                        <Text fill="#fffdfd" strokeType="OUTSIDE" strokeWidth="0.0" text="Private Classic Leagues">
+                                                            <font>
+                                                                <Font name="System Bold" size="15.0" />
+                                                            </font>
+                                                            <HBox.margin>
+                                                                <Insets />
+                                                            </HBox.margin>
+                                                        </Text>
+                                                        <Button fx:id="btnEp1" mnemonicParsing="false" onAction="#expandTable" style="-fx-background-color: rgba(255,255,255,.15); -fx-background-radius: 20;" styleClass="button13" stylesheets="@../Styles/design.css" text="V" textFill="#eeecec">
+                                                            <opaqueInsets>
+                                                                <Insets />
+                                                            </opaqueInsets>
+                                                            <HBox.margin>
+                                                                <Insets left="5.0" />
+                                                            </HBox.margin>
+                                                            <font>
+                                                                <Font size="9.0" />
+                                                            </font>
+                                                        </Button>
+                                                    </children>
+                                                    <opaqueInsets>
+                                                        <Insets />
+                                                    </opaqueInsets>
+                                                    <padding>
+                                                        <Insets left="15.0" />
+                                                    </padding>
+                                                </HBox>
+                                                <TableView fx:id="tablePrivateClassic" prefHeight="170.0" prefWidth="853.0" stylesheets="@../Styles/leagueTable.css">
+                                                    <columns>
+                                                        <TableColumn fx:id="leagues1" prefWidth="316.33331298828125" text="Leagues" />
+                                                        <TableColumn fx:id="rankIndicator" prefWidth="69.66668701171875" />
+                                                        <TableColumn fx:id="crank1" prefWidth="151.0" text="Current Rank" />
+                                                        <TableColumn fx:id="lrank1" prefWidth="154.0" text="Last Rank" />
+                                                        <TableColumn fx:id="option1" minWidth="0.0" prefWidth="161.3333740234375" />
+                                                        <TableColumn fx:id="code1" minWidth="0.0" prefWidth="0.0" sortable="false" visible="false" />
+                                                    </columns>
+                                                </TableView>
+                                            </children>
+                                        </VBox>
+                                        <VBox fx:id="WmlVB2" prefHeight="200.0" prefWidth="853.0">
+                                            <children>
+                                                <HBox alignment="CENTER" prefHeight="37.0" prefWidth="853.0" style="-fx-background-color: rgba(255,255,255,.1); -fx-background-radius: 30 30 0 0;">
+                                                    <children>
+                                                        <Text fill="#f8f7f7" strokeType="OUTSIDE" strokeWidth="0.0" text="Private Head to Head Leagues">
+                                                            <font>
+                                                                <Font name="System Bold" size="15.0" />
+                                                            </font>
+                                                        </Text>
+                                                    </children>
+                                                    <opaqueInsets>
+                                                        <Insets />
+                                                    </opaqueInsets>
+                                                    <padding>
+                                                        <Insets left="15.0" />
+                                                    </padding>
+                                                </HBox>
+                                                <TableView fx:id="tableh2h" prefHeight="170.0" prefWidth="853.0" stylesheets="@../Styles/leagueTable.css">
+                                                    <columns>
+                                                        <TableColumn fx:id="league4" prefWidth="316.33331298828125" text="Leagues" />
+                                                        <TableColumn fx:id="rankIndicator5" prefWidth="69.66668701171875" />
+                                                        <TableColumn fx:id="crank4" prefWidth="151.0" text="Current Rank" />
+                                                        <TableColumn fx:id="lrank4" prefWidth="154.0" text="Last Rank" />
+                                                        <TableColumn fx:id="option4" minWidth="0.0" prefWidth="208.0" />
+                                          <TableColumn fx:id="code4" minWidth="0.0" prefWidth="37.0" />
+                                                    </columns>
+                                                </TableView>
+                                            </children>
+                                        </VBox>
+                                        <VBox fx:id="WmlVB3" prefHeight="200.0" prefWidth="853.0">
+                                            <children>
+                                                <HBox alignment="CENTER" prefHeight="37.0" prefWidth="853.0" style="-fx-background-color: rgba(255,255,255,.1); -fx-background-radius: 30 30 0 0;">
+                                                    <children>
+                                                        <Text fill="#f8f7f7" strokeType="OUTSIDE" strokeWidth="0.0" text="Public Classic Leagues">
+                                                            <font>
+                                                                <Font name="System Bold" size="15.0" />
+                                                            </font>
+                                                        </Text>
+                                                    </children>
+                                                    <opaqueInsets>
+                                                        <Insets />
+                                                    </opaqueInsets>
+                                                    <padding>
+                                                        <Insets left="15.0" />
+                                                    </padding>
+                                                </HBox>
+                                                <TableView fx:id="tablePublic" prefHeight="170.0" prefWidth="853.0" stylesheets="@../Styles/leagueTable.css">
+                                                    <columns>
+                                                        <TableColumn fx:id="league3" prefWidth="316.33331298828125" text="Leagues" />
+                                                        <TableColumn fx:id="rankIndicator4" prefWidth="69.66668701171875" />
+                                                        <TableColumn fx:id="crank3" prefWidth="151.0" text="Current Rank" />
+                                                        <TableColumn fx:id="lrank3" prefWidth="154.0" text="Last Rank" />
+                                                        <TableColumn fx:id="option3" minWidth="0.0" prefWidth="208.0" />
+                                          <TableColumn fx:id="code3" minWidth="0.0" prefWidth="33.0" />
+                                                    </columns>
+                                                </TableView>
+                                            </children>
+                                        </VBox>
+                                        <VBox fx:id="WmlVB5" prefHeight="200.0" prefWidth="853.0">
+                                            <children>
+                                                <HBox alignment="CENTER" prefHeight="37.0" prefWidth="853.0" style="-fx-background-color: rgba(255,255,255,.1); -fx-background-radius: 30 30 0 0;">
+                                                    <children>
+                                                        <Text fill="#f8f7f7" strokeType="OUTSIDE" strokeWidth="0.0" text="Global Leagues">
+                                                            <font>
+                                                                <Font name="System Bold" size="15.0" />
+                                                            </font>
+                                                        </Text>
+                                                    </children>
+                                                    <opaqueInsets>
+                                                        <Insets />
+                                                    </opaqueInsets>
+                                                    <padding>
+                                                        <Insets left="15.0" />
+                                                    </padding>
+                                                </HBox>
+                                                <TableView fx:id="globalLeaguetable" prefHeight="170.0" prefWidth="853.0" stylesheets="@../Styles/leagueTable.css">
+                                                    <columns>
+                                                        <TableColumn fx:id="leagues2" prefWidth="316.33331298828125" text="Leagues" />
+                                                        <TableColumn fx:id="rankIndicator3" prefWidth="69.66668701171875" />
+                                                        <TableColumn fx:id="crank2" prefWidth="151.0" text="Current Rank" />
+                                                        <TableColumn fx:id="lrank2" prefWidth="154.0" text="Last Rank" />
+                                          <TableColumn fx:id="option2" prefWidth="235.0" />
+                                                        <TableColumn fx:id="code2" minWidth="0.0" prefWidth="10.0" />
+                                                    </columns>
+                                                </TableView>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                    <padding>
+                                        <Insets right="12.0" />
+                                    </padding>
+                                </VBox>
+                            </content>
+                        </ScrollPane>
+                    </children>
+                    <padding>
+                        <Insets right="-3.0" />
+                    </padding>
+                </VBox>
+            <VBox fx:id="H2HBox" prefHeight="714.0" prefWidth="844.0" style="-fx-background-color: Transparent;">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="94.0" prefWidth="953.0" spacing="3.0" style="-fx-background-color: transparent;" stylesheets="@../Styles/design.css">
+                     <children>
+                        <Text fill="#fffafa" strokeType="OUTSIDE" strokeWidth="0.0" text="Head to Head League: &lt;League Name&gt;">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Text>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+                           <children>
+                              <Button fx:id="btnStanding" mnemonicParsing="false" onMouseClicked="#handleLeaguesButton" styleClass="button16" stylesheets="@../Styles/design.css" text="Standings" />
+                              <Button fx:id="btnFixture" mnemonicParsing="false" onMouseClicked="#handleLeaguesButton" styleClass="button16" stylesheets="@../Styles/design.css" text="Fixture" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </VBox>
+                  <StackPane prefHeight="620.0" prefWidth="953.0">
+                     <children>
+                        <Pane fx:id="standingPane" prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="h2hstandingTable" prefHeight="620.0" prefWidth="953.0" stylesheets="@../Styles/leagueTable.css">
+                                <columns>
+                                  <TableColumn fx:id="rank" prefWidth="90.0" />
+                                  <TableColumn fx:id="tname" prefWidth="391.0" text="Team Name" />
+                                    <TableColumn fx:id="wins" prefWidth="119.0" text="Won" />
+                                    <TableColumn fx:id="lost" prefWidth="128.0" text="Lost" />
+                                    <TableColumn fx:id="drew" prefWidth="108.0" text="Drew" />
+                                    <TableColumn fx:id="point" prefWidth="116.0" text="Points" />
+                                    <TableColumn fx:id="idh2h" minWidth="0.0" prefWidth="0.0" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="fixturePane" prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <ComboBox fx:id="fixtureGWh2h" layoutX="361.0" layoutY="-6.0" prefHeight="30.0" prefWidth="238.0" style="-fx-background-color: #272337; -fx-border-color: white;" stylesheets="@../Styles/comboboxStyles.css" />
+                              <TableView fx:id="h2hfixture" layoutY="33.0" prefHeight="587.0" prefWidth="948.0" stylesheets="@../Styles/leagueTable.css">
+                                <columns>
+                                  <TableColumn fx:id="teama" prefWidth="342.0" />
+                                  <TableColumn fx:id="teamap" prefWidth="147.0" />
+                                    <TableColumn fx:id="teambp" prefWidth="133.0" />
+                                    <TableColumn fx:id="teamb" prefWidth="325.0" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </Pane>
+                     </children>
+                  </StackPane>
+               </children>
+               <padding>
+                  <Insets right="-3.0" />
+               </padding>
+            </VBox>
+            </children>
+        </StackPane>
+    </children>
+</AnchorPane>

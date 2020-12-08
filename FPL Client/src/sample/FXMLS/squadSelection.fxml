@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="750.0" prefWidth="957.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.squadSelection">
+    <children>
+        <Pane fx:id="trWhitePane" layoutX="341.0" prefHeight="763.0" prefWidth="652.0" style="-fx-border-color: white;" />
+        <StackPane fx:id="playerWindow" layoutX="316.0" prefHeight="763.0" prefWidth="677.0">
+            <children>
+                <Pane prefHeight="754.0" prefWidth="706.0">
+                    <children>
+                        <TableView fx:id="playerTable" layoutY="106.0" onMouseClicked="#tableMouseHandle" prefHeight="624.0" prefWidth="642.0" translateX="30.0" translateY="25.0">
+                            <columns>
+                                <TableColumn fx:id="no" prefWidth="73.3583984375" />
+                                <TableColumn fx:id="hbox" prefWidth="297.0567932128906" text="Player" />
+                                <TableColumn fx:id="cost" prefWidth="98.717041015625" text="Cost" />
+                                <TableColumn fx:id="sel" prefWidth="82.4150390625" text="Sel" />
+                                <TableColumn fx:id="Points" prefWidth="85.0" text="Points" />
+                                <TableColumn fx:id="Player" minWidth="0.0" prefWidth="0.0" />
+                                <TableColumn fx:id="club" minWidth="0.0" prefWidth="0.0" />
+                                <TableColumn fx:id="pos" minWidth="0.0" prefWidth="0.0" />
+                            </columns>
+                            <stylesheets>
+                                <URL value="@../Styles/transfers.css" />
+                                <URL value="@../Styles/tableview.css" />
+                            </stylesheets>
+                        </TableView>
+                        <Circle fx:id="btnClose1" fill="#ff451f" layoutX="626.0" layoutY="-4.0" onMouseClicked="#handleMouseEvent" radius="7.0" stroke="BLACK" strokeType="INSIDE" translateX="30.0" translateY="25.0" />
+                        <VBox alignment="TOP_CENTER" layoutX="219.0" layoutY="56.0" prefHeight="75.0" prefWidth="240.0">
+                            <children>
+                                <Pane prefHeight="30.0" prefWidth="402.0" style="-fx-background-radius: 0; -fx-border-radius: 0;" styleClass="textureButton" stylesheets="@../Styles/design.css">
+                                    <children>
+                                        <Text fill="#f5f5f5" layoutX="44.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search by Player Name">
+                                            <font>
+                                                <Font name="System Bold" size="14.0" />
+                                            </font>
+                                        </Text>
+                                    </children>
+                                </Pane>
+                                <TextField fx:id="searchBox" alignment="CENTER" maxHeight="52.0" minHeight="36.0" prefHeight="35.0" prefWidth="402.0" promptText="Player Name" style="-fx-background-color: #272337; -fx-border-color: white; -fx-border-radius: 0 0 20 20; -fx-background-radius: 0 0 20 20;" styleClass="box1" stylesheets="@../Styles/design.css">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                    <effect>
+                                        <InnerShadow choke="0.57" color="#0000005d" height="68.32" radius="37.334999999999994" width="83.02" />
+                                    </effect>
+                                </TextField>
+                            </children>
+                        </VBox>
+                        <Text fx:id="trText" fill="WHITE" layoutX="286.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </Pane>
+            </children>
+        </StackPane>
+        <Pane fx:id="setNamePane" layoutX="300.0" layoutY="300.0" opacity="0.0" prefHeight="130.0" prefWidth="448.0" style="-fx-background-color: #6229D2; -fx-background-radius: 0 0 30 30;">
+            <children>
+                <Pane layoutX="9.0" prefHeight="11.0" prefWidth="428.0" style="-fx-background-color: #7aff0d; -fx-background-radius: 50;" />
+                <TextField fx:id="Tteamname" layoutX="56.0" layoutY="25.0" prefHeight="47.0" prefWidth="341.0" style="-fx-background-color: transparent; -fx-border-color: rgba(255,255,255,1); -fx-border-width: 2; -fx-border-radius: 30;" stylesheets="@../Styles/design.css">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font></TextField>
+                <Button fx:id="btnSetTeamnameFinal" layoutX="167.0" layoutY="90.0" mnemonicParsing="false" onAction="#setTeamName" prefHeight="27.0" prefWidth="119.0" styleClass="button16" stylesheets="@../Styles/design.css" text="Set" />
+            </children>
+        </Pane>
+        <Pane layoutX="100.0" layoutY="67.0" prefHeight="679.0" prefWidth="800.0" style="-fx-background-color: transparent;">
+            <children>
+                <ImageView fitHeight="610.0" fitWidth="792.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../photos/pitch1.png" />
+                    </image>
+                    <viewport>
+                        <Rectangle2D />
+                    </viewport>
+                </ImageView>
+                <HBox alignment="CENTER" layoutY="15.0" prefHeight="67.0" prefWidth="800.0" spacing="45.0">
+                    <children>
+                        <Button fx:id="btnSetTeamname" mnemonicParsing="false" onMouseClicked="#handleMouseEvent" prefHeight="36.0" prefWidth="182.0" styleClass="button16" stylesheets="@../Styles/design.css" text="Set Team name" />
+                    </children>
+                    <padding>
+                        <Insets left="5.0" right="5.0" />
+                    </padding>
+                </HBox>
+                <Pane fx:id="playerBtnPane1" layoutX="6.0" layoutY="116.0" prefHeight="556.0" prefWidth="791.0" />
+            </children>
+        </Pane>
+        <Pane layoutX="64.0" layoutY="55.0" prefHeight="36.0" prefWidth="864.0" style="-fx-background-color: transparent;">
+            <children>
+                <Text fill="#f8f6f6" layoutX="276.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gameweek 31 deadLine:  ">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Text>
+                <Text fill="#7aff0d" layoutX="447.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sat 4 Apr 16:30 ">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Text>
+            </children>
+        </Pane>
+        <Rectangle fx:id="recty" arcHeight="5.0" arcWidth="5.0" height="40.0" layoutX="40.0" layoutY="158.0" opacity="0.4" stroke="BLACK" strokeType="INSIDE" width="900.0" />
+        <Text fill="#fffbfb" layoutX="88.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select a maximum of 3 players from a single team                                         or 'Auto Pick' if you're short of time.">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Text>
+        <VBox fx:id="messageBox" alignment="CENTER" layoutY="721.0" prefHeight="44.0" prefWidth="993.0" style="-fx-background-color: rgba(100, 0,0,1);">
+            <children>
+                <Text fx:id="message" fill="#f8f7f7" strokeType="OUTSIDE" strokeWidth="0.0">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Text>
+                <Text fx:id="message1" fill="#f8f7f7" strokeType="OUTSIDE" strokeWidth="0.0">
+                    <font>
+                        <Font name="System Bold" size="8.0" />
+                    </font>
+                </Text>
+            </children>
+        </VBox>
+        <Pane fx:id="playerBtnPane" layoutX="106.0" layoutY="178.0" prefHeight="556.0" prefWidth="791.0" />
+        <Pane fx:id="playerOption1" layoutX="260.0" layoutY="210.0" prefHeight="208.0" prefWidth="389.0" style="-fx-background-color: rgba(255,255,255,.2); -fx-border-color: white;" />
+        <Pane fx:id="playerOption" layoutX="260.0" layoutY="210.0" prefHeight="208.0" prefWidth="389.0" style="-fx-border-color: white;">
+            <children>
+                <HBox alignment="CENTER" prefHeight="40.0" prefWidth="389.0" style="-fx-background-color: rgba(255,255,255,.3);">
+                    <children>
+                        <Text fx:id="plnforOption" fill="#f4f3f3" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </HBox>
+                <Button fx:id="btnReplace" layoutX="73.0" layoutY="155.0" mnemonicParsing="false" onMouseClicked="#handleMouseEvent" prefHeight="44.0" prefWidth="245.0" styleClass="button16" stylesheets="@../Styles/design.css" text="Replace" textFill="#171717">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnInformation" layoutX="71.0" layoutY="100.0" mnemonicParsing="false" onMouseClicked="#handleMouseEvent" prefHeight="44.0" prefWidth="245.0" styleClass="button16" stylesheets="@../Styles/design.css" text="View Information" textFill="#111010">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnRemove" layoutX="72.0" layoutY="45.0" mnemonicParsing="false" onAction="#playerRemove" onMouseClicked="#handleMouseEvent" prefHeight="44.0" prefWidth="245.0" styleClass="button16" stylesheets="@../Styles/design.css" text="Remove" textFill="#111010">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Button>
+            </children>
+        </Pane>
+        <Pane prefHeight="47.0" prefWidth="980.0">
+            <children>
+                <Pane layoutX="930.0" prefHeight="45.0" prefWidth="50.0" style="-fx-background-color: #6229D2;">
+                    <children>
+                        <ImageView fitHeight="30.0" fitWidth="35.0" layoutX="9.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../icons/money.png" />
+                            </image>
+                            <effect>
+                                <ColorAdjust brightness="1.0" />
+                            </effect>
+                        </ImageView>
+                    </children>
+                </Pane>
+                <Button fx:id="btnReset" layoutX="155.0" layoutY="10.0" mnemonicParsing="false" onAction="#setReset" prefHeight="25.0" prefWidth="94.0" styleClass="button16" stylesheets="@../Styles/design.css" text="Reset">
+                    <font>
+                        <Font name="System Bold" size="9.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnAutoPick" layoutX="255.0" layoutY="10.0" mnemonicParsing="false" onAction="#setAutoPick" prefHeight="25.0" prefWidth="94.0" styleClass="button16" stylesheets="@../Styles/design.css" text="Auto Pick">
+                    <font>
+                        <Font name="System Bold" size="9.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnmakeTransfer" layoutX="15.0" layoutY="10.0" mnemonicParsing="false" onAction="#EnterSquad" prefHeight="25.0" prefWidth="134.0" styleClass="button16" stylesheets="@../Styles/design.css" text="Enter Squad">
+                    <font>
+                        <Font name="System Bold" size="9.0" />
+                    </font>
+                </Button>
+                <HBox fx:id="RmoneyBox" alignment="CENTER" layoutX="743.0" layoutY="5.0" prefHeight="36.0" prefWidth="182.0" style="-fx-border-color: white; -fx-border-radius: 20;">
+                    <children>
+                        <Text fill="#f4f3f3" strokeType="OUTSIDE" strokeWidth="0.0" text="Remaining Money:    ">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Text>
+                        <Text fx:id="TRmoney" fill="#f4f3f3" strokeType="OUTSIDE" strokeWidth="0.0">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </HBox>
+            </children>
+        </Pane>
+        <Pane layoutY="45.0" prefHeight="1.0" prefWidth="980.0" style="-fx-background-color: linear-gradient(to right, rgba(0,0,0,0), rgba(255,255,255,.4), rgba(0,0,0,0));" />
+    </children>
+</AnchorPane>
