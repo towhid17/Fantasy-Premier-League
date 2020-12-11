@@ -717,4 +717,49 @@ public class GameweekUpdate {
         }
         averagePoint = points/mid;
     }
+
+    public static void player_points_update(int id) throws SQLException, ClassNotFoundException {
+        Connection con = ServerMain.getConnection();
+        Statement st = con.createStatement();
+
+        st.execute("select POSITION from PLAYER where PLAYER_ID = "+id);
+        ResultSet rs1 = st.getResultSet();
+        int p = 0;
+        while (rs1.next()){
+            p = rs1.getInt(1);
+        }
+
+        st.execute("select MIN_PLAYED, GOAL_SCORED, GOALS_CONCEDED, RED_CARDS, YELLOW_CARDS, ASSIST, BONUS , SAVES, PENALTIES_MISSED, PENALTIES_SAVED, CLEAN_SHEET" +
+                "from PLAYER_STAT where PLAYER_ID="+id);
+        ResultSet rs = st.getResultSet();
+        int points = 0;
+        while (rs.next()){
+            int min = rs.getInt(1);
+            int gs = rs.getInt(2);
+            int gc = rs.getInt(3);
+            int rc = rs.getInt(4);
+            int yc = rs.getInt(5);
+            int as = rs.getInt(6);
+            int bo = rs.getInt(7);
+            int s = rs.getInt(8);
+            int pm = rs.getInt(9);
+            int ps = rs.getInt(9);
+            int cs = rs.getInt(10);
+
+            if(min>60) points+=2;
+            else if(min>0) points+=1;
+            if(p==1 || p==2) points+=gs*6;
+            if(p==3) points+=gs*5;
+            else points+=gs*4;
+            if(p==1 || p==2) points-=(gc/2);
+            if(p==1){
+                points+=s/3;
+            }
+            if(p==1 || p==2) points+=cs*4;
+            if(p==3) points+=cs;
+            points+=(ps*5 - pm*2 - rc*3 - yc + as*3 + bo);
+        }
+
+        st.execute("update PLAYER_STAT set POINTS = "+points+" where PLAYER_ID"+id);
+    }
 }

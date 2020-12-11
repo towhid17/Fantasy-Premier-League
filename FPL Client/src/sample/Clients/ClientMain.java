@@ -77,7 +77,7 @@ public class ClientMain extends Application {
 
     public static String FileToString(String filename){
         String string = "";
-        try(FileInputStream fin = new FileInputStream("D:\\STUDY_MATERIALS\\L2-T2\\DatabaseProject\\FPL Project Javafx\\"+filename+".txt")) {
+        try(FileInputStream fin = new FileInputStream("D:\\STUDY_MATERIALS\\L2-T2\\DatabaseProject\\Fantasy-Premier-League\\"+filename+".txt")) {
             int i=0;
             while((i=fin.read())!=-1){
                 string+=(char)i;

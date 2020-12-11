@@ -1257,6 +1257,7 @@ public class DatabaseData {
         cs.registerOutParameter(1, Types.VARCHAR);
         cs.execute();
         String rs = cs.getString(1);
+        if(rs==null) return "";
         return rs;
     }
 
@@ -1357,6 +1358,7 @@ public class DatabaseData {
         cs.execute();
         String str = cs.getString(1);
         List<String> list = new ArrayList<>();
+        if(str==null) return list;
         String[] strs = str.split("@");
         System.out.println(str);
         System.out.println(strs.length);
@@ -1487,10 +1489,10 @@ public class DatabaseData {
                 " FROM H2H_LEAGUE_TEAMS ht " +
                 " inner join USER_TEAM ut on ut.USER_TEAM_ID=ht.USER_TEAM_ID" +
                 " WHERE LEAGUE_CODE='"+code+"' and ut.GAMEWEEK = "+(ServerUI.GAMEWEEK)+" "+
-                " ORDER by ht.POINTS");
+                " ORDER by ht.POINTS desc ");
 
         ResultSet rs = st.getResultSet();
-        int i=0;
+        int i=1;
         while (rs.next()){
              String str = i+"#"+rs.getInt(1)+"#"+rs.getString(2)+"#"+rs.getInt(3)+
                      "#"+rs.getInt(4)+"#"+rs.getInt(5)+"#"+rs.getInt(6);

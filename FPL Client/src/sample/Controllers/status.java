@@ -353,7 +353,8 @@ public class status implements Initializable {
             String[] strs = str1.split("#");
             int c = Integer.parseInt(strs[0]);
             String name = strs[1];
-            int pts = Integer.parseInt(strs[2])/10;
+            String spt = strs[2].substring(0, 3);
+            int pts = Integer.parseInt(spt)/10;
             Button btnTeam = new Button();
             btnTeam.setText(name);
             btnTeam.setId(String.valueOf(c));

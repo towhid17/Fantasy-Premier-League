@@ -208,7 +208,7 @@ public class ServerUI {
 
     public static String FileToString(String filename){
         String string = "";
-        try(FileInputStream fin = new FileInputStream("D:\\STUDY_MATERIALS\\L2-T2\\DatabaseProject\\FPL Project Javafx\\"+filename+".txt")) {
+        try(FileInputStream fin = new FileInputStream("D:\\STUDY_MATERIALS\\L2-T2\\DatabaseProject\\Fantasy-Premier-League\\"+filename+".txt")) {
             int i=0;
             while((i=fin.read())!=-1){
                 string+=(char)i;
@@ -224,7 +224,7 @@ public class ServerUI {
 
     public static void stringToFile(String filename, String str){
         try{
-            FileOutputStream fout = new FileOutputStream("D:\\STUDY_MATERIALS\\L2-T2\\DatabaseProject\\FPL Project Javafx\\"+filename+".txt");
+            FileOutputStream fout = new FileOutputStream("D:\\STUDY_MATERIALS\\L2-T2\\DatabaseProject\\Fantasy-Premier-League\\"+filename+".txt");
             String fileContent = str;
             fout.write(fileContent.getBytes());
             fout.close();
